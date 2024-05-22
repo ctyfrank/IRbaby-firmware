@@ -95,7 +95,7 @@ void setup() {
   sensor_ticker.attach_scheduled(SENSOR_UPLOAD_INTERVAL, binary_sensor_loop);
 #endif  // USE_SENSOR
 
-  button.setPressTicks(3000);
+  button.setPressMs(3000);
   button.attachLongPressStart([]() { settingsClear(); });
 #ifdef USE_LED
   led.Blink(200, 200).Repeat(10);
